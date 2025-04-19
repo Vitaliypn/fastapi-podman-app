@@ -14,8 +14,6 @@ Stores and retrieves data using an in-memory structure.
 
 Project Structure
 bash
-Копіювати
-Редагувати
 .
 ├── client_service.py          # Main API gateway with authentication and orchestration
 ├── business_service.py        # Simulated data processor
@@ -28,8 +26,6 @@ Running the Services (Manually)
 Use 3 separate terminals (or tools like tmux):
 
 bash
-Копіювати
-Редагувати
 uvicorn db_service:app --port 8001
 uvicorn business_service:app --port 8002
 uvicorn client_service:app --port 8000
@@ -37,15 +33,11 @@ Authentication
 Requests to the Client Service must include the following header:
 
 makefile
-Копіювати
-Редагувати
 Authorization: Bearer SuperSecretToken
 Example Request Flow
 Trigger orchestration with:
 
 bash
-Копіювати
-Редагувати
 curl -X POST http://localhost:8000/orchestrate \
      -H "Authorization: Bearer SuperSecretToken"
 How it works:
